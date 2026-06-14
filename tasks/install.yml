@@ -32,4 +32,4 @@
     name: "{{ item }}"
     state: present
   loop: "{{ aur_packages }}"
-  when: aur_packages
+  when: aur_packages | length > 0
